@@ -1,0 +1,99 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.quote-box {
+    background-color: #ffffff; /* White background */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow for more depth */
+    padding: 40px;
+    max-width: 700px;
+    width: 90%; /* Responsive width */
+    height: auto;
+    text-align: center;
+    margin-bottom: 20px; /* Add space below the quote box */
+    margin-top: 20px; /* Add space above the quote box */
+}
+
+.quote-box h2 {
+    font-family: 'Georgia', serif; /* Newspaper-style font */
+    color: #333333; /* Classic black color */
+    margin-bottom: 20px;
+    font-size: 2em; /* Larger font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+.quote-box blockquote {
+    font-family: 'Merriweather', serif; /* New font for the quote */
+    font-style: italic;
+    color: #004d40; /* Darker teal color */
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.quote-box span {
+    display: block;
+    margin-top: 20px;
+    color: #333333; /* Black color for the author's name */
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Georgia', serif; /* Matching the font style of the heading */
+}
+
+/* Styling for buttons */
+.quote-box .buttons {
+    margin-top: 20px; /* Space above the buttons */
+}
+
+.quote-box button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff; /* Twitter blue */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.quote-box button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.quote-box a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff; /* Twitter blue */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.quote-box a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.twitter-logo {
+    width: 20px; /* Adjust size of Twitter logo */
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}

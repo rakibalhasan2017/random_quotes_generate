@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quote-box">
+        <h2>Quote of the day</h2>
+        <blockquote id="quotes">Loading</blockquote>
+        <span id="authors">loading</span>
+        <div>
+            <button onclick="get_quote()">New Quote</button>
+            <button>Tweet</button>
+        </div>
+    </div>
+    
+    <script>
+//  // Define the target API URL
+// const api_url = "https://zenquotes.io/api/random";
+
+// // Define the proxy base URL
+// const proxy_base_url = "https://api.allorigins.win/get?url=";
+
+// // Encode the API URL
+// const encoded_api_url = encodeURIComponent(api_url);
+
+// // Add cache buster parameter
+// const cache_buster = "&cachebuster=" + new Date().getTime();
+
+// // Construct the full proxy URL
+// const proxy_url = proxy_base_url + encoded_api_url + cache_buster;
+
+
+    const api_url = "https://zenquotes.io/api/random";
+     //const proxy_url = "https://api.allorigins.win/get?url=" + encodeURIComponent(api_url) + "&cachebuster=" + new Date().getTime();
+
+    async function get_quote() {
+
+         const proxy_url = "https://api.allorigins.win/get?url=" + encodeURIComponent(api_url) + "&cachebuster=" + new Date().getTime();
+
+        const response = await fetch(url);
+        const data = await response.json();
+        const contents = JSON.parse(data.contents);
+        const quote = contents[0].q;
+        const author = contents[0].a;
+        var rs1 = document.getElementById("quotes");
+        var rs2 = document.getElementById("authors");
+        rs1.innerHTML = quote;
+        rs2.innerHTML = author;
+
+    }
+     get_quote();
+     </script>
+
+</body>
+</html> 
